@@ -61,6 +61,10 @@ class FirstWeekTests(TestCase):
 
     def test_due_back_book_on_loan(self):
         bi = BookInstance.objects.filter(book__title='The Shining').first()
+        print(bi.book)
+        print(bi.imprint)
+        print(bi.due_back)
+        print(bi.status)
         self.assertEqual(str(bi.due_back), '2021-10-10')
 
 
