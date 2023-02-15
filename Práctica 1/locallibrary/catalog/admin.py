@@ -10,6 +10,7 @@ from django.contrib import admin
 
 class BooksInline(admin.TabularInline):
     model = Book
+    extra = 0
 
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
@@ -22,6 +23,7 @@ admin.site.register(Author, AuthorAdmin)
 
 class BooksInstanceInline(admin.TabularInline):
     model = BookInstance
+    extra = 0
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
