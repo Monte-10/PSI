@@ -65,7 +65,7 @@ class Author(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     date_of_birth = models.DateField(verbose_name='birth', null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+    date_of_death = models.DateField(verbose_name='died', null=True, blank=True)
     
     class Meta:
         ordering = ['last_name', 'first_name']
